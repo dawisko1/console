@@ -1,14 +1,16 @@
 {
   "name": "@dawisko1/console",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "type": "module",
   "exports": {
-    "#commands/": {
-      "import": "./commands/*.js",
-      "require": "./commands/*.js"
-    },
-    ".": "./dist/index.js"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "imports": {
+    "#commands": "./dist/commands/*.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
