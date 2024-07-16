@@ -1,4 +1,4 @@
-import Command from '#commands/command'
+import Command from '../commands/command.js'
 
 export type CommandExecutor = (argv: string[]) => void
 export default class CommandProcessor {

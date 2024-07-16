@@ -1,4 +1,4 @@
-import Command from '#commands/command'
+import Command from '../commands/command.js'
 import Context from './context.js'
 
 export type CommandExecutor = (argv: string[]) => void
@@ -8,7 +8,7 @@ export default class CommandProcessor {
 
   public register(command: Command) {
     this.commands.set(command.command.split(' ')[0], (argv: string[]) =>
-      command.handle.call(this.buildContext(command, new Context(argv, command)))
+      command.handle.call(this.buildContext(command, new Context(argv, command))),
     )
   }
 

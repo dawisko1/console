@@ -10,9 +10,6 @@
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "./dist",
-    "paths": {
-      "#commands/*": ["./src/commands/*.js"]
-    },
     "target": "esnext",
     "module": "NodeNext",
     "esModuleInterop": true,

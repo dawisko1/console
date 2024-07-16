@@ -1,4 +1,4 @@
-import Command from '#commands/command'
+import Command from '../commands/command.js'
 import Tokenizer from './tokenizer.js'
 
 export type ExecutionState = {
@@ -16,7 +16,7 @@ export default class Context {
 
   constructor(
     private readonly argv: string[],
-    private readonly _command: Command
+    private readonly _command: Command,
   ) {
     this.parse(argv, _command)
   }
