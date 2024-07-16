@@ -1,7 +1,7 @@
 {
   "name": "@dawisko1/console",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "exports": {
     "#commands/": {
