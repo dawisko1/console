@@ -1,7 +1,5 @@
 import * as dotenv from 'dotenv'
 import CommandProcessor, { CommandExecutor } from './processor/command_processor.js'
-import process from 'process'
-import { fileURLToPath } from 'url'
 import Command, { type ICommand } from './commands/command.js'
 import { default as Tree, Node } from './tree/tree.js'
 import { default as Context, type ExecutionState } from './processor/context.js'
@@ -24,16 +22,6 @@ async function main(argv: string[]): Promise<number> {
   return 0
 }
 
-/**
- * The function used to invoke the console application, simply call this at the top of your main script to handle
- * the execution flow.
- */
-async function invoke() {
-  if (process.argv[1] === fileURLToPath(import.meta.url)) {
-    await main(process.argv)
-  }
-}
-
 export {
   Command,
   CommandProcessor,
@@ -45,7 +33,6 @@ export {
   type ExecutionState,
   type Token,
   type ICommand,
-  invoke as default,
-  main,
+  main as default,
   processor,
 }
