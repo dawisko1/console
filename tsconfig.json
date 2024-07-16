@@ -8,6 +8,8 @@
   },
   "compileOnSave": true,
   "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./types",
     "paths": {
       "#commands/*": ["./src/commands/*.js"]
     },
