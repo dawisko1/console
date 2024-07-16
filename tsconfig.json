@@ -9,7 +9,7 @@
   "compileOnSave": true,
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./types",
+    "declarationDir": "./dist",
     "paths": {
       "#commands/*": ["./src/commands/*.js"]
     },
