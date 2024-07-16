@@ -1,0 +1,26 @@
+{
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "buildOptions": {
+    "outDir": "./dist",
+    "incremental": true
+  },
+  "compileOnSave": true,
+  "compilerOptions": {
+    "paths": {
+      "#commands/*": ["./src/commands/*.js"]
+    },
+    "target": "esnext",
+    "module": "NodeNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",
+    "lib": [
+      "esnext",
+      "DOM"
+    ]
+  }
+}
