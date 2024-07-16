@@ -15,11 +15,6 @@ declare const processor: CommandProcessor
  * @param {string[]} argv The arguments passed to the application via the cli.
  */
 declare function main(argv: string[]): Promise<number>
-/**
- * The function used to invoke the console application, simply call this at the top of your main script to handle
- * the execution flow.
- */
-declare function invoke(): Promise<void>
 export {
   Command,
   CommandProcessor,
@@ -31,7 +26,6 @@ export {
   type ExecutionState,
   type Token,
   type ICommand,
-  invoke as default,
-  main,
+  main as default,
   processor,
 }
