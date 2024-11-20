@@ -83,7 +83,7 @@ export class Node {
     let current = this
 
     while (current.parent) {
-      // @ts-ignore
+      // @ts-expect-error
       current = current.parent
     }
 
