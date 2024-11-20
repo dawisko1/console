@@ -26,39 +26,39 @@ export default class CommandProcessor {
     const newContext: { [key: string]: any } = {}
 
     for (let entry of Object.getOwnPropertyNames(command)) {
-      // @ts-ignore
+      // @ts-expect-error
       if (typeof command[entry] === 'function') {
-        // @ts-ignore
+        // @ts-expect-error
         newContext[entry] = command[entry].bind(command)
       } else {
-        // @ts-ignore
+        // @ts-expect-error
         newContext[entry] = command[entry]
       }
     }
 
     for (let entry of Object.getOwnPropertyNames(Object.getPrototypeOf(command))) {
-      // @ts-ignore
+      // @ts-expect-error
       if (typeof command[entry] === 'function' && !entry.startsWith('_')) {
-        // @ts-ignore
+        // @ts-expect-error
         newContext[entry] = command[entry].bind(command)
       }
     }
 
     for (let entry of Object.getOwnPropertyNames(context)) {
-      // @ts-ignore
+      // @ts-expect-error
       if (typeof context[entry] === 'function') {
-        // @ts-ignore
+        // @ts-expect-error
         newContext[entry] = context[entry].bind(context)
       } else {
-        // @ts-ignore
+        // @ts-expect-error
         newContext[entry] = context[entry]
       }
     }
 
     for (let entry of Object.getOwnPropertyNames(Object.getPrototypeOf(context))) {
-      // @ts-ignore
+      // @ts-expect-error
       if (typeof context[entry] === 'function' && !entry.startsWith('_')) {
-        // @ts-ignore
+        // @ts-expect-error
         newContext[entry] = context[entry].bind(context)
       }
     }
